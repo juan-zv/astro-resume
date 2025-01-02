@@ -1,22 +1,32 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import BaseHeader from "../components/BaseHeader.astro"
+import BaseFooter from "../components/BaseFooter.astro"
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Zurita - Resume</title>
+    <meta name="author" content="Juan Zurita">
+    <meta name="description" content="Juan Zurita's resume">
+    <meta name="color-scheme" content="light dark">
+    <link rel="shortcut icon" href="images/j-key.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <script src="scripts.js" defer></script> -->
+
+    <meta property="og:image" content="https://raw.githubusercontent.com/juan-zv/html-resume/main/images/yo-v2.jpg">
+    <meta property="og:title" content="Juan Zurita - Resume">
+    <meta property="og:description" content="Vanilla JavaScript Webpage made to host my Resume. I hope you enjoy it.">
+    <meta property="og:url" content="https://juan-zv.github.io/html-resume/">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <BaseHeader/>
+    <main>
+        <slot/>
+    </main>
+    <BaseFooter/>
+</body>
+</html>
